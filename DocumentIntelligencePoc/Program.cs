@@ -3,11 +3,13 @@ using Azure.AI.DocumentIntelligence;
 using System.Text;
 using System.Text.Json;
 
-const string endpoint = "https://<your-resource-name>.cognitiveservices.azure.com/";
-const string key = "<your-key>";
+const string endpoint = "https://pocintelligence.cognitiveservices.azure.com/";
 
 const string inputFolder = "input";
 const string outputFolder = "output";
+
+string key = Environment.GetEnvironmentVariable("AZURE_DOCUMENT_INTELLIGENCE_KEY")
+    ?? throw new InvalidOperationException("環境変数 'AZURE_DOCUMENT_INTELLIGENCE_KEY' が設定されていません。");
 
 var client = new DocumentIntelligenceClient(
     new Uri(endpoint),
@@ -24,15 +26,33 @@ Directory.CreateDirectory(outputFolder);
 string[] targetExtensions =
 [
     ".pdf",
-    ".png",
-    ".jpg",
-    ".jpeg",
-    ".tif",
-    ".tiff",
-    ".bmp",
+    //".png",
+    //".jpg",
+    //".jpeg",
+    //".tif",
+    //".tiff",
+    //".bmp",
     ".docx",
+    ".docm",
+    ".dotx",
+    ".dotm",
+    ".doc",
+    ".dot",
     ".xlsx",
+    ".xls",
+    ".xlsm",
+    ".xlsb",
+    ".xltx",        
+    ".xltm",
+    ".csv",
+    ".xlt",
     ".pptx",
+    ".ppt",
+    ".pptm",
+    ".ppsx",
+    ".ppsm",
+    ".potx",
+    ".potm",
     ".html"
 ];
 
@@ -57,7 +77,8 @@ int failureCount = 0;
 foreach (string filePath in files)
 {
     string fileName = Path.GetFileName(filePath);
-    string baseName = Path.GetFileNameWithoutExtension(filePath);
+    //string baseName = Path.GetFileNameWithoutExtension(filePath);
+    string baseName = Path.GetFileName(filePath);
 
     string safeBaseName = MakeSafeFileName(baseName);
     string fileOutputFolder = Path.Combine(outputFolder, safeBaseName);
