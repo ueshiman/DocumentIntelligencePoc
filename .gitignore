@@ -361,3 +361,23 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/DocumentIntelligencePoc/input/macrotest.ppt
+/DocumentIntelligencePoc/input/MacroTest.xlsm
+/DocumentIntelligencePoc/input/MacroTest.xlsx
+/DocumentIntelligencePoc/input/macrotestx.pptm
+/DocumentIntelligencePoc/input/poc_attachment_special_chars.txt
+/DocumentIntelligencePoc/input/poc_metadata_special_chars_cp932_limited.csv
+/DocumentIntelligencePoc/input/poc_metadata_special_chars_utf8_bom.csv
+/DocumentIntelligencePoc/input/poc_metadata_special_chars_utf8_no_bom.csv
+/DocumentIntelligencePoc/input/poc_special_chars_parse_chunk_metadata_001_BOM無し.txt
+/DocumentIntelligencePoc/input/poc_test_doc.doc
+/DocumentIntelligencePoc/input/poc_test_docx.doc
+/DocumentIntelligencePoc/input/poc_test_ppt.ppt
+/DocumentIntelligencePoc/input/poc_test_xls.xls
+/DocumentIntelligencePoc/input/test_macro.docm
+/DocumentIntelligencePoc/input/test_macro.pptm
+/DocumentIntelligencePoc/input/test_macro.xlsm
+/DocumentIntelligencePoc/input/test_macro1.docm
+/DocumentIntelligencePoc/input/マクロ検証用テストドキュメント.docm
+/DocumentIntelligencePoc/input/ＳＭＢＣ日興証券.html
+/DocumentIntelligencePoc/input/ＳＭＢＣ日興証券utf8.html
